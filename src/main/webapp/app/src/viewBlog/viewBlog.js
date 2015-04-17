@@ -9,6 +9,7 @@ angular.module('app.viewBlog',['ui.router','textAngular']).config(function($stat
         data: {pageTitle: 'View Blog'}
     });
 }).controller('viewBlogCtrl',function($scope,$state,$stateParams,blogResource,userLoginStatus,userBlogCommentResource) {
+    $scope.comment = {};
     blogResource.getOneBlog($stateParams.userId,$stateParams.blogId,function(data) {
         alert("success");
         $scope.blog = data;
@@ -41,16 +42,36 @@ angular.module('app.viewBlog',['ui.router','textAngular']).config(function($stat
         }
     }, function() {
         alert("failure");
+        $scope.commentable = true;
     });
 
-    userBlogCommentResource.getAllByBlog($stateParams.blogId,{page:0,size:10},function(data) {
+    userBlogCommentResource.getAllByBlog($stateParams.blogId,{page:0,size:5},function(data) {
         $scope.userBlogCommentList = data;
     }, function() {
         alert("Retrieve comment failure");
     });
 
     $scope.pageChange = function() {
-
+        userBlogCommentResource.getAllByBlog($stateParams.blogId,{page:$scope.currentPage - 1,size:5},function(data) {
+            $scope.userBlogCommentList = data;
+        }, function() {
+            alert("Retrieve comment failure");
+        });
     };
+
+    $scope.submitComment = function() {
+        $scope.comment.commentDate = new Date();
+        userBlogCommentResource.addComment(userLoginStatus.getUserId(),$stateParams.blogId,$scope.comment, function() {
+            //alert("success");
+            userBlogCommentResource.getAllByBlog($stateParams.blogId,{page:0,size:5},function(data) {
+                $scope.userBlogCommentList = data;
+                $scope.commentable = false;
+            }, function() {
+                alert("Retrieve comment failure");
+            });
+        },function() {
+            alert("falure");
+        });
+    }
 
 });

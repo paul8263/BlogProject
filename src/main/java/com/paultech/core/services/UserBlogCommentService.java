@@ -6,6 +6,7 @@ import com.paultech.core.entities.UserBlogCommentPK;
 import com.paultech.core.entities.UserEntity;
 import com.paultech.core.repo.UserBlogCommentRepo;
 import com.paultech.core.services.exceptions.DuplicatedCommentException;
+import com.paultech.core.services.exceptions.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -30,7 +31,12 @@ public class UserBlogCommentService {
     }
 
     public UserBlogComment findById(UserBlogCommentPK userBlogCommentPK) {
-        return userBlogCommentRepo.findOne(userBlogCommentPK);
+        UserBlogComment userBlogComment = userBlogCommentRepo.findOne(userBlogCommentPK);
+        if(null == userBlogComment) {
+            throw new EntityNotFoundException("Comment with user id: " + userBlogCommentPK.getUserEntity().getUserId() + " and blog id: " + userBlogCommentPK.getBlogEntity().getBlogId() + " does not exist.");
+        } else {
+            return userBlogComment;
+        }
     }
 
     public UserBlogComment save(UserBlogComment userBlogComment) {

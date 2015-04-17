@@ -33,16 +33,18 @@ angular.module('app.home',['ui.router']).config(function ($stateProvider) {
 
     $scope.onlyViewMineToggle = function () {
         if($scope.onlyViewMine == 1) {
-            blogResource.getAllBlogsByUser(userLoginStatus.getUserId(),{page:$scope.currentPage,size:10},function(data) {
+            blogResource.getAllBlogsByUser(userLoginStatus.getUserId(),{page:$scope.currentPage-1,size:10},function(data) {
                 alert("success");
                 $scope.blogList = data;
+                $scope.currentPage = 0;
             },function() {
                 alert("failure");
             });
         } else {
-            blogResource.getAllBlogs({page:$scope.currentPage,size:10},function(data) {
+            blogResource.getAllBlogs({page:$scope.currentPage-1,size:10},function(data) {
                 alert("success");
                 $scope.blogList = data;
+                $scope.currentPage = 0;
             },function() {
                 alert("failure");
             });

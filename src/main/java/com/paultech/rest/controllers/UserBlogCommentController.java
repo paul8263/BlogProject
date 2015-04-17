@@ -69,7 +69,9 @@ public class UserBlogCommentController {
             pk.setUserEntity(userEntity);
             pk.setBlogEntity(blogEntity);
 
-            return userBlogCommentResourceAsm.toResource(userBlogCommentService.findById(pk));
+            UserBlogComment userBlogComment = userBlogCommentService.findById(pk);
+
+            return userBlogCommentResourceAsm.toResource(userBlogComment);
 
         } catch (EntityNotFoundException e) {
             throw new NotFoundException("UserEntity or BlogEntity does not exist");
