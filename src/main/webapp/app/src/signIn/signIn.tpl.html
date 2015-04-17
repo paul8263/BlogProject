@@ -1,0 +1,24 @@
+<div class="col-sm-6 col-sm-offset-3">
+    <form ng-submit="submit()" name="signInForm">
+        <div class="form-group" ng-class="{'has-error': signInForm.username.$error.pattern}">
+            <label>Your name:</label>
+            <input name="username" ng-model="user.username" class="form-control" type="text" ng-pattern="/^\w{6,16}$/" required placeholder="Your name" maxlength="16"/>
+        </div>
+        <div class="alert alert-danger" ng-show="signInForm.username.$touched && signInForm.username.$error.pattern">
+            <p>Your name should only contain digits and letters. Min length is 6 and max length is 16.</p>
+        </div>
+        <div class="form-group" ng-class="{'has-error': signInForm.password.$error.pattern}">
+            <label>Your password:</label>
+            <input name="password" ng-model="user.password" class="form-control" type="password" ng-pattern="/^\S{6,16}$/" required placeholder="Your password" maxlength="16"/>
+        </div>
+        <div class="alert alert-danger" ng-show="signInForm.password.$touched && signInForm.password.$error.pattern">
+            <p>Your name should only contain digits and letters. Min length is 6 and max length is 16.</p>
+        </div>
+        <div class="btn-group">
+            <button type="submit" class="btn btn-success" ng-disabled="signInForm.$invalid">Sign In</button>
+            <button type="reset" class="btn btn-warning">Reset</button>
+        </div>
+    </form>
+    <p>{{signInForm.$valid}}</p>
+    <p><pre>{{user | json}}</pre></p>
+</div>

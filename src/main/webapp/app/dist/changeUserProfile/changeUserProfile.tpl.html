@@ -1,0 +1,65 @@
+
+<div class="col-sm-6 col-sm-offset-3">
+    <form ng-submit="submit()" name="registerForm">
+        <div class="form-group">
+            <label>Change Password&nbsp;&nbsp; <input type="checkbox" ng-model="changePassword"/>
+            </label>
+        </div>
+        <div class="form-group" ng-class="{'has-error': registerForm.oldPassword.$error.pattern}" ng-show="changePassword">
+            <label>Your old password:</label>
+            <input name="oldPassword" ng-model="user.oldPassword" class="form-control" type="password" placeholder="Your password" ng-pattern="/^\S{6,16}$/" maxlength="16"/>
+        </div>
+        <div class="form-group" ng-class="{'has-error': registerForm.password.$error.pattern}" ng-show="changePassword">
+            <label>Your new password:</label>
+            <input name="password" ng-model="user.password" class="form-control" type="password" placeholder="Your password" ng-pattern="/^\S{6,16}$/" maxlength="16"/>
+        </div>
+        <div class="alert alert-danger" ng-show="registerForm.password.$touched && registerForm.password.$error.pattern">
+            <p>Your name should only contain digits and letters. Min length is 6 and max length is 16.</p>
+        </div>
+        <div class="form-group" ng-class="{'has-error': registerForm.confirmPassword.$error.confirmValid}" ng-show="changePassword">
+            <label>Confirm password:</label>
+            <input name="confirmPassword" ng-model="user.confirmPassword" class="form-control" type="password" placeholder="Your password" maxlength="16" confirm-password/>
+        </div>
+        <div class="alert alert-danger" ng-show="registerForm.confirmPassword.$touched && registerForm.confirmPassword.$error.confirmValid">
+            <p>You should enter the same password as above.</p>
+        </div>
+        <div class="form-group">
+            <label>Your gender:</label>
+            <div class="radio">
+                <label>
+                    <input type="radio" ng-model="user.gender" value="MALE" name="gender"/>
+                    Male
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" ng-model="user.gender" value="FEMALE" name="gender"/>
+                    Female
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Your birthday:</label>
+            <p class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="user.birthday" is-open="opened" min-date="'1950-01-01'" max-date="'2015-06-22'" ng-required="true" close-text="Close" datepicker-options="dateOptions"/>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
+        <div class="form-group">
+            <label>Your icon:</label>
+            <input class="form-control" ng-model="user.iconPath" type="text" placeholder="Your name"/>
+        </div>
+        <div class="form-group">
+            <label>Your self introduce:</label>
+            <textarea class="form-control" ng-model="user.selfIntroduce" name="" cols="100" rows="10">Self introduce</textarea>
+        </div>
+        <div class="btn-group">
+            <button type="submit" class="btn btn-success" ng-disabled="registerForm.$invalid">Change Profile</button>
+            <button type="button" class="btn btn-warning" ui-sref="userProfile">Cancel</button>
+        </div>
+    </form>
+    <p>{{registerForm.$valid}}</p>
+    <p><pre>{{user | json}}</pre></p>
+</div>

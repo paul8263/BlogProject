@@ -1,0 +1,128 @@
+[
+  {
+    "userId": 1,
+    "username": "Paul",
+    "password": "123456",
+    "gender": "MALE",
+    "birthday": "1989-06-21",
+    "selfIntroduce": "Hello Everyone",
+    "iconPath": "/img/001.jpg",
+    "role": "ROLE_USER"
+  },
+  {
+    "links": [
+      {
+        "rel": "self",
+        "href": "http://localhost:8080/myblog/user{?page,size,sort}"
+      }
+    ],
+    "content": [
+      {
+        "userId": 1,
+        "username": "Paul",
+        "gender": "MALE",
+        "birthday": "1989-06-21",
+        "selfIntroduce": "Hello Everyone",
+        "iconPath": "/img/001.jpg",
+        "links": [
+          {
+            "rel": "self",
+            "href": "http://localhost:8080/myblog/user/1"
+          },
+          {
+            "rel": "allBlogs",
+            "href": "http://localhost:8080/myblog/user/1/blog"
+          }
+        ]
+      },
+      {
+        "userId": 2,
+        "username": "Mary",
+        "gender": "MALE",
+        "birthday": "1989-06-21",
+        "selfIntroduce": "Hello Everyone",
+        "iconPath": "/img/001.jpg",
+        "links": [
+          {
+            "rel": "self",
+            "href": "http://localhost:8080/myblog/user/2"
+          },
+          {
+            "rel": "allBlogs",
+            "href": "http://localhost:8080/myblog/user/2/blog"
+          }
+        ]
+      }
+    ],
+    "page": {
+      "size": 10,
+      "totalElements": 2,
+      "totalPages": 1,
+      "number": 0
+    }
+  },
+
+  {
+    "blogId": 1,
+    "title": "Javascript",
+    "content": "Learn Javascript",
+    "createDate": "2014-06-21",
+    "ModifyDate": "2014-06-22"
+  },
+  {
+    "links": [
+      {
+        "rel": "self",
+        "href": "http://localhost:8080/myblog/user/1/blog{?page,size,sort}"
+      }
+    ],
+    "content": [
+      {
+        "blogId": 2,
+        "title": "Spring",
+        "content": "Learn Spring",
+        "createDate": "2014-06-21",
+        "modifyDate": null,
+        "links": [
+          {
+            "rel": "self",
+            "href": "http://localhost:8080/myblog/user/1/blog/2"
+          },
+          {
+            "rel": "delete",
+            "href": "http://localhost:8080/myblog/user/1/blog/2"
+          },
+          {
+            "rel": "allHisBlogs",
+            "href": "http://localhost:8080/myblog/user/1/blog"
+          }
+        ]
+      }
+    ],
+    "page": {
+      "size": 10,
+      "totalElements": 1,
+      "totalPages": 1,
+      "number": 0
+    }
+  },
+
+  {
+    "comment": "hahahahaha. This is comment",
+    "commentDate": "2015-01-22"
+  },
+  {
+    "comment": "hahahahaha. This is comment",
+    "commentDate": "2015-01-22",
+    "links": [
+      {
+        "rel": "self",
+        "href": "http://localhost:8080/myblog/comment/user/1/blog/2"
+      },
+      {
+        "rel": "delete",
+        "href": "http://localhost:8080/myblog/comment/user/1/blog/2"
+      }
+    ]
+  }
+]
