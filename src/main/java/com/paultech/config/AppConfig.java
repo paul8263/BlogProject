@@ -11,7 +11,7 @@ import javax.servlet.Filter;
 public class AppConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[] {SpringConfig.class};
+        return new Class[] {SpringConfig.class, SecurityConfig.class};
     }
 
     @Override

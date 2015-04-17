@@ -13,6 +13,7 @@
 /Users/paulzhang/Documents/Intellij_Projects/myblog/src/main/java/com/paultech/config/MvcConfig.java
 /Users/paulzhang/Documents/Intellij_Projects/myblog/src/main/java/com/paultech/rest/resources/UserBlogCommentResource.java
 /Users/paulzhang/Documents/Intellij_Projects/myblog/src/main/java/com/paultech/rest/resources/asm/UserEntityResourceAsm.java
+/Users/paulzhang/Documents/Intellij_Projects/myblog/src/main/java/com/paultech/config/SecurityWebApplicationInitializer.java
 /Users/paulzhang/Documents/Intellij_Projects/myblog/src/main/java/com/paultech/core/services/BlogEntityService.java
 /Users/paulzhang/Documents/Intellij_Projects/myblog/src/main/java/com/paultech/rest/controllers/UserController.java
 /Users/paulzhang/Documents/Intellij_Projects/myblog/src/main/java/com/paultech/rest/controllers/exceptions/ConflictException.java
@@ -27,6 +28,7 @@
 /Users/paulzhang/Documents/Intellij_Projects/myblog/src/main/java/com/paultech/config/SpringConfig.java
 /Users/paulzhang/Documents/Intellij_Projects/myblog/src/main/java/com/paultech/core/entities/BlogEntity.java
 /Users/paulzhang/Documents/Intellij_Projects/myblog/src/main/java/com/paultech/core/entities/AdministratorEntity.java
+/Users/paulzhang/Documents/Intellij_Projects/myblog/src/main/java/com/paultech/config/SecurityConfig.java
 /Users/paulzhang/Documents/Intellij_Projects/myblog/src/main/java/com/paultech/core/services/UserBlogCommentService.java
 /Users/paulzhang/Documents/Intellij_Projects/myblog/src/main/java/com/paultech/core/services/AdministratorEntityService.java
 /Users/paulzhang/Documents/Intellij_Projects/myblog/src/main/java/com/paultech/core/repo/AdministratorEntityRepo.java

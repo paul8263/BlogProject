@@ -9,6 +9,7 @@ com/paultech/core/services/exceptions/UserNameConflictException.class
 com/paultech/rest/resources/UserEntityResource.class
 com/paultech/rest/controllers/exceptions/ConflictException.class
 com/paultech/core/repo/UserBlogCommentRepo.class
+com/paultech/config/SecurityConfig.class
 com/paultech/rest/resources/asm/BlogEntityResourceAsm.class
 com/paultech/core/repo/BlogEntityRepo.class
 com/paultech/core/services/UserBlogCommentService.class
@@ -30,4 +31,5 @@ com/paultech/core/services/exceptions/DuplicatedCommentException.class
 com/paultech/core/entities/UserBlogCommentPK.class
 com/paultech/core/entities/UserEntity.class
 com/paultech/core/services/AdministratorEntityService.class
+com/paultech/config/SecurityWebApplicationInitializer.class
 com/paultech/core/entities/Gender.class
