@@ -3,16 +3,32 @@
         <div class="col-sm-12"><h1>{{blog.title}}</h1></div>
     </div>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-4">
             <span><i>{{blog.ownerUsername}}</i></span>
         </div>
+        <div class="col-sm-4">
+            <span>Create date: {{blog.createDate}}</span>
+        </div>
+        <div class="col-sm-4">
+            <span>Modify date: {{blog.modifyDate}}</span>
+        </div>
     </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <hr/>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-sm-12">
             <div ta-bind ng-model="blog.content"></div>
         </div>
     </div>
+
     <div class="row" ng-show="modifiable">
+        <div class="col-sm-12">
+            <hr/>
+        </div>
         <div class="col-sm-12">
             <div class="btn-group">
                 <button type="Modify" class="btn btn-primary" ng-click="modify()">Modify Blog</button>
@@ -41,10 +57,9 @@
                 </div>
             </div>
 
-
         </div>
     </div>
-    <div class="row">
+    <div class="row" ng-show="userBlogCommentList.content.length > 5">
         <div class="col-sm-12">
             <pagination total-items="userBlogCommentList.page.totalElements" ng-model="currentPage" max-size="'5'" class="pagination-sm" boundary-links="true" ng-change="pageChange()"></pagination>
         </div>
