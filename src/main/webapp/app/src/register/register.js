@@ -8,7 +8,7 @@ angular.module('app.register',['ui.router']).config(function($stateProvider) {
         templateUrl: 'register/register.tpl.html',
         data: { pageTitle: 'Register' }
     });
-}).controller('registerCtrl',function($scope,$state,userResource,userLoginStatus) {
+}).controller('registerCtrl',function($scope,$state,userResource,userLoginStatus,sessionService) {
 
     $scope.user = {};
     $scope.user.gender = "MALE";
@@ -37,6 +37,12 @@ angular.module('app.register',['ui.router']).config(function($stateProvider) {
             userResource.addUser($scope.user,function(data) {
                 $scope.$parent.isLoggedIn = true;
                 $scope.$parent.userId = data.userId;
+
+                sessionService.login($scope.user.username,$scope.user.password, function() {
+                    alert("security login success");
+                }, function() {
+                    alert("security login fail");
+                });
 
                 userLoginStatus.login(data.userId);
 

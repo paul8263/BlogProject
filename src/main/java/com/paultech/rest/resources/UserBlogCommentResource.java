@@ -3,12 +3,16 @@ package com.paultech.rest.resources;
 import com.paultech.core.entities.UserBlogComment;
 import org.springframework.hateoas.ResourceSupport;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 /**
  * Created by paulzhang on 7/04/15.
  */
 public class UserBlogCommentResource extends ResourceSupport {
+    @NotNull
+    @Size(min = 15, max = 2000)
     private String comment;
     private Date commentDate;
     private String commenterUsername;

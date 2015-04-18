@@ -8,6 +8,8 @@ import com.paultech.core.services.BlogEntityService;
 import com.paultech.core.services.UserBlogCommentService;
 import com.paultech.core.services.UserEntityService;
 import com.paultech.core.services.exceptions.EntityNotFoundException;
+import com.paultech.rest.controllers.exceptions.BadRequestException;
+import com.paultech.rest.controllers.exceptions.ForbiddenException;
 import com.paultech.rest.controllers.exceptions.NotFoundException;
 import com.paultech.rest.resources.UserBlogCommentResource;
 import com.paultech.rest.resources.asm.UserBlogCommentResourceAsm;
@@ -17,14 +19,17 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.PagedResources;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 /**
  * Created by paulzhang on 6/04/15.
  */
 @Controller
 @RequestMapping(value = "/comment")
-public class UserBlogCommentController {
+public class UserBlogCommentController extends ParentController {
 
     @Autowired
     private UserEntityService userEntityService;
@@ -79,7 +84,16 @@ public class UserBlogCommentController {
     }
 
     @RequestMapping(value = "/user/{userId}/blog/{blogId}",method = RequestMethod.POST)
-    public @ResponseBody UserBlogCommentResource createUserBlogCommentByUserIdAndBlogId(@PathVariable("userId") Long userId,@PathVariable("blogId") Long blogId, @RequestBody UserBlogCommentResource userBlogCommentResource) {
+    public @ResponseBody UserBlogCommentResource createUserBlogCommentByUserIdAndBlogId(@PathVariable("userId") Long userId,@PathVariable("blogId") Long blogId, @RequestBody @Valid UserBlogCommentResource userBlogCommentResource, BindingResult result) {
+
+        if(result.hasErrors()) {
+            throw new BadRequestException("Comment is illegal");
+        }
+
+        if(!getAuthenticatedUserId(userEntityService).equals(userId)) {
+            throw new ForbiddenException("Id of the authenticated user is different from the userId in URL");
+        }
+
         try {
             UserBlogCommentPK pk = new UserBlogCommentPK();
             UserEntity userEntity = userEntityService.findById(userId);
@@ -96,7 +110,16 @@ public class UserBlogCommentController {
     }
 
     @RequestMapping(value = "/user/{userId}/blog/{blogId}",method = RequestMethod.PUT)
-    public @ResponseBody UserBlogCommentResource updateUserBlogCommentByUserIdAndBlogId(@PathVariable("userId") Long userId,@PathVariable("blogId") Long blogId, @RequestBody UserBlogCommentResource userBlogCommentResource) {
+    public @ResponseBody UserBlogCommentResource updateUserBlogCommentByUserIdAndBlogId(@PathVariable("userId") Long userId,@PathVariable("blogId") Long blogId, @RequestBody @Valid UserBlogCommentResource userBlogCommentResource, BindingResult result) {
+
+        if(result.hasErrors()) {
+            throw new BadRequestException("Comment is illegal");
+        }
+
+        if(!getAuthenticatedUserId(userEntityService).equals(userId)) {
+            throw new ForbiddenException("Id of the authenticated user is different from the userId in URL");
+        }
+
         try {
             UserBlogCommentPK pk = new UserBlogCommentPK();
             UserEntity userEntity = userEntityService.findById(userId);
@@ -115,6 +138,11 @@ public class UserBlogCommentController {
 
     @RequestMapping(value = "/user/{userId}/blog/{blogId}",method = RequestMethod.DELETE)
     public @ResponseBody UserBlogCommentResource deleteUserBlogCommentByUserIdAndBlogId(@PathVariable("userId") Long userId,@PathVariable("blogId") Long blogId) {
+
+        if(!getAuthenticatedUserId(userEntityService).equals(userId)) {
+            throw new ForbiddenException("Id of the authenticated user is different from the userId in URL");
+        }
+
         try {
             UserBlogCommentPK pk = new UserBlogCommentPK();
             UserEntity userEntity = userEntityService.findById(userId);

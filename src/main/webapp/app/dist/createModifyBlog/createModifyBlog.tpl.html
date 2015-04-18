@@ -6,7 +6,7 @@
         </div>
         <div class="form-group">
             <label>Blog Content:</label>
-            <text-angular name="content" ng-model="blog.content" ta-text-editor-class="textContent"></text-angular>
+            <text-angular name="content" ng-model="blog.content" ta-text-editor-class="textContent" required></text-angular>
         </div>
         <div class="btn-group">
             <button type="submit" class="btn btn-success" ng-disabled="createBlogForm.$invalid" ng-click="submit()">{{createModifyBlogText}}</button>

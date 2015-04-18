@@ -36,6 +36,7 @@
                             <li ng-class="{active: state.includes('signin')}" ng-hide="isLoggedIn"><a href="#" ui-sref="signin">Sign in<span class="sr-only">(current)</span></a></li>
                             <li ng-class="{active: state.includes('register')}" ng-hide="isLoggedIn"><a href="#" ui-sref="register">Register</a></li>
                             <li ng-class="{active: state.includes('userProfile')}" ng-show="isLoggedIn"><a href="#" ui-sref="userProfile">My Profile</a></li>
+                            <li ng-show="isLoggedIn"><a href="#" ng-click="logout()">Log out</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
@@ -81,8 +82,8 @@
         <!-- Footer -->
         <div class="row">
             <small><em>Programmed By Yao Zhang</em></small>
-            <p>{{state.current.name}}</p>
-            <p>{{isLoggedIn}}</p>
+            <p>Current state name: {{state.current.name}}</p>
+            <p>User logged in: {{isLoggedIn}}</p>
             <button type="button" class="btn btn-danger" ng-click="toggle()">Toggle Login</button>
         </div>
 

@@ -8,6 +8,7 @@ import com.paultech.core.services.exceptions.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -40,11 +41,13 @@ public class BlogEntityService {
         }
     }
 
+    @PreAuthorize("isAuthenticated()")
     public BlogEntity save(BlogEntity blogEntity) {
         blogEntityRepo.save(blogEntity);
         return blogEntity;
     }
 
+    @PreAuthorize("isAuthenticated()")
     public void delete(BlogEntity blogEntity) {
         blogEntityRepo.delete(blogEntity);
     }

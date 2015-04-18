@@ -5,6 +5,7 @@ import com.paultech.core.entities.UserEntity;
 import com.paultech.core.services.BlogEntityService;
 import com.paultech.core.services.UserEntityService;
 import com.paultech.core.services.exceptions.EntityNotFoundException;
+import com.paultech.rest.controllers.exceptions.BadRequestException;
 import com.paultech.rest.controllers.exceptions.ForbiddenException;
 import com.paultech.rest.controllers.exceptions.NotFoundException;
 import com.paultech.rest.resources.BlogEntityResource;
@@ -15,13 +16,16 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.PagedResources;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 /**
  * Created by paulzhang on 6/04/15.
  */
 @Controller
-public class BlogController {
+public class BlogController extends ParentController {
 
     @Autowired
     private UserEntityService userEntityService;
@@ -52,7 +56,16 @@ public class BlogController {
     }
 
     @RequestMapping(value = "/user/{userId}/blog", method = RequestMethod.POST)
-    public @ResponseBody BlogEntityResource createBlog(@PathVariable("userId") Long userId, @RequestBody BlogEntityResource blogEntityResource) {
+    public @ResponseBody BlogEntityResource createBlog(@PathVariable("userId") Long userId, @RequestBody @Valid BlogEntityResource blogEntityResource, BindingResult result) {
+
+        if(result.hasErrors()) {
+            throw new BadRequestException("Blog information is illegal");
+        }
+
+        if(!getAuthenticatedUserId(userEntityService).equals(userId)) {
+            throw new ForbiddenException("Id of the authenticated user is different from the userId in URL");
+        }
+
         try {
             UserEntity userEntity = userEntityService.findById(userId);
             BlogEntity blogEntity = blogEntityResource.toBlogEntity();
@@ -66,7 +79,16 @@ public class BlogController {
 
 
     @RequestMapping(value = "/user/{userId}/blog/{blogId}", method = RequestMethod.PUT)
-    public @ResponseBody BlogEntityResource updateBlogById(@PathVariable("userId") Long userId, @PathVariable("blogId") Long blogId, @RequestBody BlogEntityResource blogEntityResource) {
+    public @ResponseBody BlogEntityResource updateBlogById(@PathVariable("userId") Long userId, @PathVariable("blogId") Long blogId, @RequestBody @Valid BlogEntityResource blogEntityResource, BindingResult result) {
+
+        if(result.hasErrors()) {
+            throw new BadRequestException("Blog information is illegal");
+        }
+
+        if(!getAuthenticatedUserId(userEntityService).equals(userId)) {
+            throw new ForbiddenException("Id of the authenticated user is different from the userId in URL");
+        }
+
         try {
             UserEntity userEntity = userEntityService.findById(userId);
             BlogEntity blogEntity = blogEntityResource.toBlogEntity();
@@ -98,6 +120,11 @@ public class BlogController {
 
     @RequestMapping(value = "/user/{userId}/blog/{blogId}",method = RequestMethod.DELETE)
     public @ResponseBody BlogEntityResource deleteBlog(@PathVariable("userId") Long userId, @PathVariable("blogId") Long blogId) {
+
+        if(!getAuthenticatedUserId(userEntityService).equals(userId)) {
+            throw new ForbiddenException("Id of the authenticated user is different from the userId in URL");
+        }
+
         try {
             BlogEntity blogEntity = blogEntityService.findById(blogId);
 

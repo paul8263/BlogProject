@@ -1,24 +1,34 @@
 package com.paultech.rest.resources;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.paultech.core.entities.Gender;
 import com.paultech.core.entities.UserEntity;
 import org.springframework.hateoas.ResourceSupport;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * Created by paulzhang on 4/04/15.
  */
 public class UserEntityResource extends ResourceSupport {
     private Long userId;
+    @NotNull
+    @Size(min = 6, max = 16)
     private String username;
     private String oldPassword;
+    @NotNull
+    @Size(min = 6, max = 16)
     private String password;
+    @NotNull
     private Gender gender;
+    @Past
     private Date birthday;
+    @Size(max = 300)
     private String selfIntroduce;
     private String iconPath;
 

@@ -3,6 +3,8 @@ package com.paultech.rest.resources;
 import com.paultech.core.entities.BlogEntity;
 import org.springframework.hateoas.ResourceSupport;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 /**
@@ -10,7 +12,12 @@ import java.util.Date;
  */
 public class BlogEntityResource extends ResourceSupport {
     private Long blogId;
+    @NotNull
+    @Size(max = 255)
     private String title;
+
+    @NotNull
+    @Size(max = 9000)
     private String content;
     private Date createDate;
     private Date modifyDate;

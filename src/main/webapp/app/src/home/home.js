@@ -1,7 +1,7 @@
 /**
  * Created by paulzhang on 27/03/15.
  */
-angular.module('app.home',['ui.router']).config(function ($stateProvider) {
+angular.module('app.home',['ui.router','textAngular']).config(function ($stateProvider) {
     $stateProvider.state( 'home', {
         url: '/home',
         controller: 'homeCtrl',

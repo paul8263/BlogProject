@@ -1,6 +1,6 @@
 <div class="col-sm-8">
     <div ng-hide="blogList.content == null || blog.content.length == 0">
-        <div class="media" ng-repeat="item in blogList.content">
+        <div class="media" ng-repeat="item in blogList.content | orderBy:'createDate'">
             <div class="media-left media-middle">
                 <a href="#">
                     <img class="media-object" src="" alt="...">
@@ -8,9 +8,8 @@
             </div>
             <div class="media-body">
                 <h4 class="media-heading"><a ng-click="viewBlog(item.ownerId,item.blogId)">{{item.title}}</a></h4>
-                {{item.content}}
-                <p>{{item.createDate}}</p>
-                <p>{{item.ownerUsername}}</p>
+                <div ta-bind ng-model="item.content | limitTo:20"></div><span>...</span>
+                <p>Date created: {{item.createDate}} &nbsp;&nbsp;&nbsp;&nbsp; Date modified: {{item.modifyDate}} &nbsp;&nbsp;&nbsp;&nbsp; {{item.ownerUsername}}</p>
             </div>
         </div>
         <pagination total-items="blogList.page.totalElements" ng-model="currentPage" max-size="'5'" class="pagination-sm" boundary-links="true" ng-change="pageChange()"></pagination>
@@ -18,7 +17,7 @@
     <div ng-show="blogList.content == null || blog.content.length == 0">There is no content temporarily.</div>
 </div>
 <div class="col-sm-3 col-sm-offset-1">
-    <span>This is sidebar</span>
+    <p>Options</p>
     <p><button class="btn btn-success btn-block" ng-show="isLoggedIn" ng-model="onlyViewMine" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0" ng-change="onlyViewMineToggle()">Only View My Blog</button></p>
     <p><button class="btn btn-primary btn-block" ng-show="isLoggedIn" ui-sref="createModifyBlog">Create New Blog</button></p>
 </div>

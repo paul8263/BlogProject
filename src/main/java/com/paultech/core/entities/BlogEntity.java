@@ -39,6 +39,7 @@ public class BlogEntity implements Serializable {
         this.blogId = blogId;
     }
 
+    @Column(length = 255)
     public String getTitle() {
         return title;
     }

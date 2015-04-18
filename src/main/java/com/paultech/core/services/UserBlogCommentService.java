@@ -10,6 +10,7 @@ import com.paultech.core.services.exceptions.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -39,6 +40,7 @@ public class UserBlogCommentService {
         }
     }
 
+    @PreAuthorize("isAuthenticated()")
     public UserBlogComment save(UserBlogComment userBlogComment) {
         UserBlogComment existingUserBlogComment = userBlogCommentRepo.findOne(userBlogComment.getUserBlogCommentPK());
         if(existingUserBlogComment != null) {
@@ -51,11 +53,13 @@ public class UserBlogCommentService {
         }
     }
 
+    @PreAuthorize("isAuthenticated()")
     public UserBlogComment update(UserBlogComment userBlogComment) {
         userBlogCommentRepo.save(userBlogComment);
         return userBlogComment;
     }
 
+    @PreAuthorize("isAuthenticated()")
     public void delete(UserBlogComment userBlogComment) {
         userBlogCommentRepo.delete(userBlogComment);
     }

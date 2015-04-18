@@ -1,5 +1,9 @@
 package com.paultech.config;
 
+import com.paultech.core.SecurityHandler.EntryPointUnauthorizedHandler;
+import com.paultech.core.SecurityHandler.FailureHandler;
+import com.paultech.core.SecurityHandler.LogoutHandler;
+import com.paultech.core.SecurityHandler.SuccessHandler;
 import com.paultech.core.SecurityUserService.MyBlogUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -18,11 +22,23 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-@ComponentScan(basePackages = {"com.paultech.core.SecurityUserService"})
+@ComponentScan(basePackages = {"com.paultech.core.SecurityUserService","com.paultech.core.SecurityHandler"})
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private MyBlogUserDetailsService myBlogUserDetailsService;
+
+    @Autowired
+    private SuccessHandler successHandler;
+
+    @Autowired
+    private FailureHandler failureHandler;
+
+    @Autowired
+    private EntryPointUnauthorizedHandler entryPointUnauthorizedHandler;
+
+    @Autowired
+    private LogoutHandler logoutHandler;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -38,18 +54,29 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
+        http
+            .authorizeRequests()
                 .antMatchers("app/**")
                 .permitAll()
-            .and()
-                .csrf()
+                .antMatchers("login")
+                .permitAll()
+                .antMatchers("logout")
+                .permitAll()
+                .and()
+            .csrf()
                 .disable()
             .formLogin()
                 .loginProcessingUrl("/login")
                 .usernameParameter("username")
                 .passwordParameter("password")
-            .and()
-                .logout()
-                .logoutUrl("/logout");
+                .successHandler(successHandler)
+                .failureHandler(failureHandler)
+                .and()
+            .logout()
+                .logoutUrl("/logout")
+                .logoutSuccessHandler(logoutHandler)
+                .and()
+            .exceptionHandling()
+                .authenticationEntryPoint(entryPointUnauthorizedHandler);
     }
 }

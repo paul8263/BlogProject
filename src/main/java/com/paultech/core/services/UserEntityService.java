@@ -8,6 +8,7 @@ import com.paultech.core.services.exceptions.UserNameConflictException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -57,11 +58,13 @@ public class UserEntityService {
         }
     }
 
+    @PreAuthorize("isAuthenticated()")
     public UserEntity updateUser(UserEntity userEntity) {
         userEntityRepo.save(userEntity);
         return userEntity;
     }
 
+    @PreAuthorize("isAuthenticated()")
     public void deleteUser(UserEntity userEntity) {
         userEntityRepo.delete(userEntity);
     }

@@ -5,6 +5,7 @@ angular.module('app',['ui.router','ngAnimate','ngResource', 'ui.bootstrap','app.
 }).factory('userResource',function($resource,basePath) {
 
     var res = $resource(basePath + 'user/:userId',{userId:'@userId'},{update:{method:'PUT'}});
+    var resUsername = $resource(basePath + 'user/username/:username',{username:'@username'});
     return {
         addUser: function(user,success,failure) {
             res.save(user,success,failure);
@@ -20,6 +21,9 @@ angular.module('app',['ui.router','ngAnimate','ngResource', 'ui.bootstrap','app.
         },
         getOneUser: function (userId,success,failure) {
             res.get({userId: userId},success,failure);
+        },
+        getOneUserByUsername: function (username,success,failure) {
+            resUsername.get({username:username},success,failure);
         }
     };
 
@@ -95,7 +99,26 @@ angular.module('app',['ui.router','ngAnimate','ngResource', 'ui.bootstrap','app.
 
     return service;
 
-}).controller( 'appCtrl', function($scope, $location, userLoginStatus ) {
+}).factory('sessionService',function($state,$http,basePath) {
+    var service = {};
+    service.login = function (username,password,success,failure) {
+        $http.post(basePath + 'login?username=' + username + '&password=' + password, {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        }).then(success,failure);
+    };
+
+    service.logout = function (success,failure) {
+        $http.post(basePath + 'logout', {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        }).then(success,failure);
+    };
+
+    return service;
+}).controller( 'appCtrl', function($scope,$state, $location, userLoginStatus,sessionService ) {
     $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
         if ( angular.isDefined( toState.data.pageTitle ) ) {
             $scope.pageTitle = toState.data.pageTitle + ' | My Blog' ;
@@ -110,5 +133,19 @@ angular.module('app',['ui.router','ngAnimate','ngResource', 'ui.bootstrap','app.
         } else {
             userLoginStatus.logout();
         }
-    }
+    };
+
+    $scope.logout = function() {
+        sessionService.logout(function() {
+            $scope.isLoggedIn = false;
+            $scope.userId = '';
+            userLoginStatus.logout();
+
+            alert("logout success");
+
+            $state.go("signin");
+        }, function () {
+            alert("logout fail");
+        });
+    };
 });

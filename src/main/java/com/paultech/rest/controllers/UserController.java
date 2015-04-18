@@ -4,6 +4,7 @@ import com.paultech.core.entities.UserEntity;
 import com.paultech.core.services.UserEntityService;
 import com.paultech.core.services.exceptions.EntityNotFoundException;
 import com.paultech.core.services.exceptions.UserNameConflictException;
+import com.paultech.rest.controllers.exceptions.BadRequestException;
 import com.paultech.rest.controllers.exceptions.ConflictException;
 import com.paultech.rest.controllers.exceptions.ForbiddenException;
 import com.paultech.rest.controllers.exceptions.NotFoundException;
@@ -14,14 +15,17 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.PagedResources;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 /**
  * Created by paulzhang on 21/03/15.
  */
 @Controller
 @RequestMapping(value = "/user")
-public class UserController {
+public class UserController extends ParentController {
 
     @Autowired
     private UserEntityService userEntityService;
@@ -29,9 +33,13 @@ public class UserController {
     @Autowired
     private UserEntityResourceAsm userEntityResourceAsm;
 
-
     @RequestMapping(method = RequestMethod.POST)
-    public @ResponseBody UserEntityResource createUser(@RequestBody UserEntityResource userEntityResource) {
+    public @ResponseBody UserEntityResource createUser(@RequestBody @Valid UserEntityResource userEntityResource, BindingResult result) {
+
+        if (result.hasErrors()) {
+            throw new BadRequestException("User information is illegal");
+        }
+
         try {
             UserEntity userEntity = userEntityResource.toUserEntity();
             userEntityService.createUser(userEntity);
@@ -58,12 +66,29 @@ public class UserController {
         } catch(EntityNotFoundException e) {
             throw new NotFoundException("User with id: " + id + " does not exist");
         }
+    }
 
+    @RequestMapping(value = "/username/{username}", method = RequestMethod.GET)
+    public @ResponseBody UserEntityResource getUserByUsername(@PathVariable("username") String username) {
+        try {
+            UserEntity userEntity = userEntityService.findByUsername(username);
+            return userEntityResourceAsm.toResource(userEntity);
+        } catch (EntityNotFoundException e ) {
+            throw new NotFoundException("User with name: " + username + " does not exist");
+        }
     }
 
 
     @RequestMapping(value = "/{userId}", method = RequestMethod.PUT)
-    public @ResponseBody UserEntityResource updateUser(@PathVariable("userId") Long userId, @RequestBody UserEntityResource userEntityResource) {
+    public @ResponseBody UserEntityResource updateUser(@PathVariable("userId") Long userId, @RequestBody @Valid UserEntityResource userEntityResource, BindingResult result) {
+
+        if (result.hasErrors()) {
+            throw new BadRequestException("User information is illegal");
+        }
+
+        if(!getAuthenticatedUserId(userEntityService).equals(userId)) {
+            throw new ForbiddenException("Id of the authenticated user is different from the userId in URL");
+        }
 
         userEntityResource.setUserId(userId);
         UserEntity userEntity;
@@ -92,6 +117,11 @@ public class UserController {
 
     @RequestMapping(value = "/{userId}", method = RequestMethod.DELETE)
     public @ResponseBody UserEntityResource deleteUser(@PathVariable("userId") Long userId) {
+
+        if(!getAuthenticatedUserId(userEntityService).equals(userId)) {
+            throw new ForbiddenException("Id of the authenticated user is different from the userId in URL");
+        }
+
         try {
             UserEntity userEntity = userEntityService.findById(userId);
             userEntityService.deleteUser(userEntity);
