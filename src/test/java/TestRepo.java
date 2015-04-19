@@ -11,6 +11,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -433,6 +435,18 @@ public class TestRepo {
         blogEntityService.save(blogEntity1);
         blogEntityService.save(blogEntity2);
 
+    }
+
+
+    @Test
+    public void testBcrypt() {
+        BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+        ShaPasswordEncoder shaPasswordEncoder = new ShaPasswordEncoder();
+//        System.out.println(bCryptPasswordEncoder.matches("123456", bCryptPasswordEncoder.encode("123456")));
+        System.out.println(bCryptPasswordEncoder.encode("123456"));
+        System.out.println(bCryptPasswordEncoder.encode("123456"));
+        System.out.println(shaPasswordEncoder.encodePassword("123456",null));
+        System.out.println(shaPasswordEncoder.encodePassword("123456",null));
     }
 
 }

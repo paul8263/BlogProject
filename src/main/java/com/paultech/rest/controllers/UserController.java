@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.PagedResources;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -33,6 +34,9 @@ public class UserController extends ParentController {
     @Autowired
     private UserEntityResourceAsm userEntityResourceAsm;
 
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+
     @RequestMapping(method = RequestMethod.POST)
     public @ResponseBody UserEntityResource createUser(@RequestBody @Valid UserEntityResource userEntityResource, BindingResult result) {
 
@@ -42,6 +46,9 @@ public class UserController extends ParentController {
 
         try {
             UserEntity userEntity = userEntityResource.toUserEntity();
+
+            userEntity.setPassword(bCryptPasswordEncoder.encode(userEntity.getPassword()));
+
             userEntityService.createUser(userEntity);
             userEntity = userEntityService.findByUsername(userEntityResource.getUsername());
             return userEntityResourceAsm.toResource(userEntity);
@@ -104,12 +111,15 @@ public class UserController extends ParentController {
             userEntityService.updateUser(userEntityToUpdate);
             return userEntityResourceAsm.toResource(userEntityService.findById(userId));
 
-        } else if(userEntity.getPassword().equals(userEntityResource.getOldPassword())) {
+        } else if(bCryptPasswordEncoder.matches(userEntityResource.getOldPassword(),userEntity.getPassword())) {
 
             UserEntity userEntityToUpdate = userEntityResource.toUserEntity();
+            userEntityToUpdate.setPassword(bCryptPasswordEncoder.encode(userEntityToUpdate.getPassword()));
             userEntityService.updateUser(userEntityToUpdate);
             return userEntityResourceAsm.toResource(userEntityService.findById(userId));
+
         } else {
+
             throw new ForbiddenException("User with username: " + userEntity.getUsername() + " old password does not match.");
         }
 

@@ -53,7 +53,7 @@ public class UserEntity implements Serializable {
         this.username = username;
     }
 
-    @Column(length = 32)
+    @Column(length = 60)
     public String getPassword() {
         return password;
     }

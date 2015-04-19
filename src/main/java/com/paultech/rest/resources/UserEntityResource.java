@@ -21,7 +21,6 @@ public class UserEntityResource extends ResourceSupport {
     @Size(min = 6, max = 16)
     private String username;
     private String oldPassword;
-    @NotNull
     @Size(min = 6, max = 16)
     private String password;
     @NotNull
