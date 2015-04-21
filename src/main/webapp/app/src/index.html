@@ -7,7 +7,7 @@
     <%styles.forEach(function(file) {%>
     <link rel="stylesheet" type="text/css" href="<%=file%>"/><%});%>
 </head>
-<body>
+<body ng-init="init()">
 
     <div class="container">
         <!-- Title image -->

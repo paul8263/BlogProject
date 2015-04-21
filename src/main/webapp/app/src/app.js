@@ -118,7 +118,31 @@ angular.module('app',['ui.router','ngAnimate','ngResource', 'ui.bootstrap','app.
     };
 
     return service;
-}).controller( 'appCtrl', function($scope,$state, $location, userLoginStatus,sessionService ) {
+}).factory('serverLoginStatusGetter',function($resource,basePath) {
+    var res = $resource(basePath + "user/current",{});
+    var service = {};
+    service.getLoggedInUser = function(success,failure) {
+        res.get({},success,failure);
+    };
+    return service;
+}).controller( 'appCtrl', function($scope,$state, $location, userLoginStatus,sessionService,serverLoginStatusGetter ) {
+
+    $scope.init = function() {
+        serverLoginStatusGetter.getLoggedInUser(function(data) {
+            if(data.userId != undefined) {
+                $scope.isLoggedIn = true;
+                $scope.userId = data.userId;
+                userLoginStatus.login(data.userId);
+            } else {
+                $scope.isLoggedIn = false;
+                $scope.userId = '';
+                userLoginStatus.logout();
+            }
+        },function() {
+            alert("retrieve user login status failure");
+        });
+    };
+
     $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
         if ( angular.isDefined( toState.data.pageTitle ) ) {
             $scope.pageTitle = toState.data.pageTitle + ' | My Blog' ;

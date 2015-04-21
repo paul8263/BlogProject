@@ -1,5 +1,6 @@
 package com.paultech.rest.controllers;
 
+import com.paultech.core.SecurityUserService.MyBlogUserDetails;
 import com.paultech.core.entities.UserEntity;
 import com.paultech.core.services.UserEntityService;
 import com.paultech.core.services.exceptions.EntityNotFoundException;
@@ -14,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.PagedResources;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -36,6 +38,19 @@ public class UserController extends ParentController {
 
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    @RequestMapping(value = "/current", method = RequestMethod.GET)
+    public @ResponseBody UserEntityResource getCurrentLoggedInUserName() {
+        Object principle = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        UserEntityResource userEntityResource;
+        if(principle instanceof MyBlogUserDetails) {
+            String username = ((MyBlogUserDetails)principle).getUsername();
+            userEntityResource = userEntityResourceAsm.toResource(userEntityService.findByUsername(username));
+        } else {
+            userEntityResource = new UserEntityResource();
+        }
+        return userEntityResource;
+    }
 
     @RequestMapping(method = RequestMethod.POST)
     public @ResponseBody UserEntityResource createUser(@RequestBody @Valid UserEntityResource userEntityResource, BindingResult result) {
