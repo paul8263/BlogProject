@@ -23,6 +23,7 @@ com/paultech/core/repo/AdministratorEntityRepo.class
 com/paultech/core/SecurityUserService/MyBlogUserDetails.class
 com/paultech/config/SpringConfig.class
 com/paultech/core/entities/UserBlogComment.class
+com/paultech/core/SecurityHandler/RestCsrfFilter.class
 com/paultech/config/AppConfig.class
 com/paultech/rest/controllers/exceptions/BadRequestException.class
 com/paultech/core/entities/BlogEntity.class

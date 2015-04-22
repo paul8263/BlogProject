@@ -17,14 +17,14 @@ module.exports = function(grunt) {
         vendorFiles: {
             js: [
                 'bower_components/jquery/dist/jquery.min.js',
-                'bower_components/bootstrap/dist/js/bootstrap.min.js',
-                'bower_components/angularjs/angular.min.js',
+                'bower_components/angular/angular.min.js',
                 'bower_components/angular-resource/angular-resource.min.js',
-                'bower_components/angular-ui-router/release/angular-ui-router.min.js',
                 'bower_components/angular-animate/angular-animate.min.js',
+                'bower_components/angular-cookies/angular-cookies.min.js',
+                'bower_components/angular-ui-router/release/angular-ui-router.min.js',
+                'bower_components/bootstrap/dist/js/bootstrap.min.js',
                 'bower_components/angular-bootstrap/ui-bootstrap.min.js',
                 'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
-                'bower_components/spring-security-csrf-token-interceptor/dist/spring-security-csrf-token-interceptor.min.js',
                 'bower_components/textAngular/dist/textAngular.min.js',
                 'bower_components/textAngular/dist/textAngular-rangy.min.js',
                 'bower_components/textAngular/dist/textAngular-sanitize.min.js'

@@ -1,7 +1,34 @@
-angular.module('app',['ui.router','ngAnimate','ngResource', 'ui.bootstrap','app.home','app.signIn','app.register','app.userProfile','app.changeUserProfile','app.createModifyBlog','app.viewBlog']).config(function($stateProvider,$urlRouterProvider) {
+angular.module('app',['ui.router','ngAnimate','ngCookies','ngResource', 'ui.bootstrap','app.home','app.signIn','app.register','app.userProfile','app.changeUserProfile','app.createModifyBlog','app.viewBlog']).config(function($stateProvider,$urlRouterProvider,$httpProvider) {
     $urlRouterProvider.otherwise('/home');
+
+    //Set default CSRF header and cookie name
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRF-TOKEN';
+    $httpProvider.defaults.xsrfCookieName = 'CSRF-TOKEN';
+
+    //$httpProvider.defaults.headers.common.Cookie = document.cookie;
+
+    //$httpProvider.defaults.headers.common['Access-Control-Allow-Origin'] = 'localhost:8080/';
+    //$httpProvider.defaults.headers.common['Access-Control-Allow-Credentials'] = 'true';
+
+    $httpProvider.interceptors.push('authInterceptor');
+
 }).value('basePath','/myblog/').run(function($rootScope,$state) {
     $rootScope.state = $state;
+}).factory('authInterceptor',function($cookies) {
+    function b(a){return a?(a^Math.random()*16>>a/4).toString(16):([1e16]+1e16).replace(/[01]/g,b)}
+
+    var token = b();
+
+    return {
+        'request': function(config) {
+
+            $cookies['CSRF-TOKEN'] = token;
+
+            //config.headers['Cookie'] = 'CSRF-TOKEN=' + $cookies['CSRF-TOKEN'];
+
+            return config;
+        }
+    };
 }).factory('userResource',function($resource,basePath) {
 
     var res = $resource(basePath + 'user/:userId',{userId:'@userId'},{update:{method:'PUT'}});
@@ -125,9 +152,10 @@ angular.module('app',['ui.router','ngAnimate','ngResource', 'ui.bootstrap','app.
         res.get({},success,failure);
     };
     return service;
-}).controller( 'appCtrl', function($scope,$state, $location, userLoginStatus,sessionService,serverLoginStatusGetter ) {
+}).controller( 'appCtrl', function($scope,$state,$location,userLoginStatus,sessionService,serverLoginStatusGetter) {
 
     $scope.init = function() {
+
         serverLoginStatusGetter.getLoggedInUser(function(data) {
             if(data.userId != undefined) {
                 $scope.isLoggedIn = true;
@@ -157,6 +185,10 @@ angular.module('app',['ui.router','ngAnimate','ngResource', 'ui.bootstrap','app.
         } else {
             userLoginStatus.logout();
         }
+
+        //var res = $resource("/test",{});
+        //res.save({},function(){},function(){alert("Toggle!")});
+
     };
 
     $scope.logout = function() {

@@ -30,7 +30,6 @@ angular.module('app.register',['ui.router']).config(function($stateProvider) {
     };
 
 
-
     $scope.submit = function () {
 
         if($scope.registerForm.$valid) {
@@ -51,8 +50,9 @@ angular.module('app.register',['ui.router']).config(function($stateProvider) {
                 alert('Failure');
             });
 
-
         }
+
+
     };
 }).directive('confirmPassword', function () {
     return {

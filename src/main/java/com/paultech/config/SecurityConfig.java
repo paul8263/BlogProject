@@ -1,9 +1,6 @@
 package com.paultech.config;
 
-import com.paultech.core.SecurityHandler.EntryPointUnauthorizedHandler;
-import com.paultech.core.SecurityHandler.FailureHandler;
-import com.paultech.core.SecurityHandler.LogoutHandler;
-import com.paultech.core.SecurityHandler.SuccessHandler;
+import com.paultech.core.SecurityHandler.*;
 import com.paultech.core.SecurityUserService.MyBlogUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -17,6 +14,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.csrf.CsrfFilter;
 
 /**
  * Created by paulzhang on 17/04/15.
@@ -72,6 +70,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
             .csrf()
                 .disable()
+            .addFilterBefore(new RestCsrfFilter(), CsrfFilter.class)
             .formLogin()
                 .loginProcessingUrl("/login")
                 .usernameParameter("username")
