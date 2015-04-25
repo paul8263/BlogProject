@@ -29,7 +29,6 @@ public class UserEntityResource extends ResourceSupport {
     private Date birthday;
     @Size(max = 300)
     private String selfIntroduce;
-    private String iconPath;
 
     public Long getUserId() {
         return userId;
@@ -91,14 +90,6 @@ public class UserEntityResource extends ResourceSupport {
         this.selfIntroduce = selfIntroduce;
     }
 
-    public String getIconPath() {
-        return iconPath;
-    }
-
-    public void setIconPath(String iconPath) {
-        this.iconPath = iconPath;
-    }
-
     public UserEntity toUserEntity() {
         UserEntity userEntity = new UserEntity();
         userEntity.setUserId(this.userId);
@@ -106,7 +97,6 @@ public class UserEntityResource extends ResourceSupport {
         userEntity.setPassword(this.password);
         userEntity.setGender(this.gender);
         userEntity.setBirthday(this.birthday);
-        userEntity.setIconPath(this.iconPath);
         userEntity.setSelfIntroduce(this.selfIntroduce);
         userEntity.setRole("ROLE_USER");
 

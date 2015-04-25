@@ -34,6 +34,11 @@ public class SpringConfig {
     @Autowired
     private Environment environment;
 
+    @Bean
+    public String iconLocation() {
+        return environment.getProperty("iconFileLocation");
+    }
+
 
     @Bean
     public BasicDataSource basicDataSource() {

@@ -42,7 +42,6 @@ public class UserEntityResourceAsm extends ResourceAssemblerSupport<UserEntity,U
         userEntityResource.setPassword(userEntity.getPassword());
         userEntityResource.setGender(userEntity.getGender());
         userEntityResource.setBirthday(userEntity.getBirthday());
-        userEntityResource.setIconPath(userEntity.getIconPath());
         userEntityResource.setSelfIntroduce(userEntity.getSelfIntroduce());
 
         userEntityResource.add(linkTo(methodOn(UserController.class).getUserById(userEntity.getUserId())).withSelfRel());

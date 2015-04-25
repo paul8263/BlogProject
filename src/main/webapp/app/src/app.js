@@ -31,11 +31,45 @@ angular.module('app',['ui.router','ngAnimate','ngCookies','ngResource', 'ui.boot
     };
 }).factory('userResource',function($resource,basePath) {
 
-    var res = $resource(basePath + 'user/:userId',{userId:'@userId'},{update:{method:'PUT'}});
+    var res = $resource(basePath + 'user/:userId',{userId:'@userId'},{
+        update: {
+            method:'PUT'
+        },
+        add: {
+            method: 'POST',
+            headers: {
+                'Content-Type': undefined,
+                enctype: 'multipart/form-data'
+            },
+            transformRequest: function(data,headers) {
+                var fd = new FormData();
+                angular.forEach(data,function(value,key) {
+                    fd.append(key,value);
+                });
+                return fd;
+            }
+        }
+    });
     var resUsername = $resource(basePath + 'user/username/:username',{username:'@username'});
+    var userIcon = $resource(basePath + 'user/:userId/icon',{userId:'@userId'},{
+        add: {
+            method: 'POST',
+            headers: {
+                'Content-Type': undefined,
+                enctype: 'multipart/form-data'
+            },
+            transformRequest: function(data,headers) {
+                var fd = new FormData();
+                angular.forEach(data,function(value,key) {
+                    fd.append(key,value);
+                });
+                return fd;
+            }
+        }
+    });
     return {
         addUser: function(user,success,failure) {
-            res.save(user,success,failure);
+            res.add(user,success,failure);
         },
         updateUser: function(user,success,failure) {
             res.update(user,success,failure);
@@ -51,6 +85,9 @@ angular.module('app',['ui.router','ngAnimate','ngCookies','ngResource', 'ui.boot
         },
         getOneUserByUsername: function (username,success,failure) {
             resUsername.get({username:username},success,failure);
+        },
+        updateUserIcon: function(userId,icon,success,failure) {
+            userIcon.add({userId:userId,icon:icon},success,failure);
         }
     };
 
@@ -152,6 +189,35 @@ angular.module('app',['ui.router','ngAnimate','ngCookies','ngResource', 'ui.boot
         res.get({},success,failure);
     };
     return service;
+}).directive('confirmPassword', function () {
+    return {
+        restrict: 'A',
+        require: 'ngModel',
+        link: function (scope, element, attr, ctrl) {
+            element.on('blur',function() {
+                scope.$apply(function () {
+                    if(scope.user.password == scope.user.confirmPassword) {
+                        ctrl.$setValidity('confirmValid', true);
+                    } else {
+                        ctrl.$setValidity('confirmValid', false);
+                    }
+                });
+
+            });
+
+        }
+    };
+}).directive('fileread', function() {
+    return {
+        restrict: 'A',
+        link: function(scope,element,attr) {
+            element.bind('change',function(changeEvent) {
+                scope.$apply(function() {
+                    scope[attr.fileread] = changeEvent.target.files[0];
+                });
+            });
+        }
+    };
 }).controller( 'appCtrl', function($scope,$state,$location,userLoginStatus,sessionService,serverLoginStatusGetter) {
 
     $scope.init = function() {

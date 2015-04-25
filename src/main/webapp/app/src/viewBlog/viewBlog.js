@@ -8,7 +8,7 @@ angular.module('app.viewBlog',['ui.router','textAngular']).config(function($stat
         controller: 'viewBlogCtrl',
         data: {pageTitle: 'View Blog'}
     });
-}).controller('viewBlogCtrl',function($scope,$state,$stateParams,blogResource,userLoginStatus,userBlogCommentResource) {
+}).controller('viewBlogCtrl',function($scope,$state,$stateParams,blogResource,userLoginStatus,userBlogCommentResource,basePath) {
     $scope.comment = {};
     blogResource.getOneBlog($stateParams.userId,$stateParams.blogId,function(data) {
         alert("success");
@@ -51,6 +51,10 @@ angular.module('app.viewBlog',['ui.router','textAngular']).config(function($stat
         alert("Retrieve comment failure");
     });
 
+    $scope.userIconPath = function(userId) {
+        return basePath + "user/" + userId + "/icon";
+    };
+
     $scope.pageChange = function() {
         userBlogCommentResource.getAllByBlog($stateParams.blogId,{page:$scope.currentPage - 1,size:5},function(data) {
             $scope.userBlogCommentList = data;
@@ -70,7 +74,7 @@ angular.module('app.viewBlog',['ui.router','textAngular']).config(function($stat
                 alert("Retrieve comment failure");
             });
         },function() {
-            alert("falure");
+            alert("failure");
         });
     }
 

@@ -12,7 +12,7 @@ angular.module('app.register',['ui.router']).config(function($stateProvider) {
 
     $scope.user = {};
     $scope.user.gender = "MALE";
-    $scope.user.birthday = "1970-01-01";
+    $scope.user.birthday = "";
 
     $scope.open = function($event) {
         $event.preventDefault();
@@ -33,6 +33,9 @@ angular.module('app.register',['ui.router']).config(function($stateProvider) {
     $scope.submit = function () {
 
         if($scope.registerForm.$valid) {
+
+            $scope.user.icon = $scope.icon;
+
             userResource.addUser($scope.user,function(data) {
                 $scope.$parent.isLoggedIn = true;
                 $scope.$parent.userId = data.userId;
@@ -53,23 +56,5 @@ angular.module('app.register',['ui.router']).config(function($stateProvider) {
         }
 
 
-    };
-}).directive('confirmPassword', function () {
-    return {
-        restrict: 'A',
-        require: 'ngModel',
-        link: function (scope, element, attr, ctrl) {
-            element.on('blur',function() {
-                scope.$apply(function () {
-                    if(scope.user.password == scope.user.confirmPassword) {
-                        ctrl.$setValidity('confirmValid', true);
-                    } else {
-                        ctrl.$setValidity('confirmValid', false);
-                    }
-                });
-
-            });
-
-        }
     };
 });

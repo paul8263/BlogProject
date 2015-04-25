@@ -49,11 +49,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-2 col-sm-offset-8">
-                    <span>{{item.commentDate}}</span>
-                </div>
-                <div class="col-sm-2">
+                <div class="col-sm-2 col-sm-offset-7">
+                    <img ng-src="{{userIconPath(item.commenterUserId)}}" alt="25px,25px" height="25px" width="25px"/>
                     <span>{{item.commenterUsername}}</span>
+                </div>
+                <div class="col-sm-3">
+                    <span>Date: {{item.commentDate}}</span>
                 </div>
             </div>
 

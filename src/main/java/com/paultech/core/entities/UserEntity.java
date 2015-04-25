@@ -24,7 +24,6 @@ public class UserEntity implements Serializable {
     private Gender gender;
     private Date birthday;
     private String selfIntroduce;
-    private String iconPath;
     private String role;
 
 
@@ -90,15 +89,6 @@ public class UserEntity implements Serializable {
         this.selfIntroduce = selfIntroduce;
     }
 
-    @Column(name = "icon_path")
-    public String getIconPath() {
-        return iconPath;
-    }
-
-    public void setIconPath(String iconPath) {
-        this.iconPath = iconPath;
-    }
-
     @JsonIgnore
     @Column(length = 20)
     public String getRole() {
@@ -147,7 +137,6 @@ public class UserEntity implements Serializable {
 
         if (birthday != null ? !birthday.equals(that.birthday) : that.birthday != null) return false;
         if (gender != that.gender) return false;
-        if (iconPath != null ? !iconPath.equals(that.iconPath) : that.iconPath != null) return false;
         if (password != null ? !password.equals(that.password) : that.password != null) return false;
         if (role != null ? !role.equals(that.role) : that.role != null) return false;
         if (selfIntroduce != null ? !selfIntroduce.equals(that.selfIntroduce) : that.selfIntroduce != null)
@@ -166,7 +155,6 @@ public class UserEntity implements Serializable {
         result = 31 * result + (gender != null ? gender.hashCode() : 0);
         result = 31 * result + (birthday != null ? birthday.hashCode() : 0);
         result = 31 * result + (selfIntroduce != null ? selfIntroduce.hashCode() : 0);
-        result = 31 * result + (iconPath != null ? iconPath.hashCode() : 0);
         result = 31 * result + (role != null ? role.hashCode() : 0);
         return result;
     }

@@ -8,7 +8,7 @@ angular.module('app.home',['ui.router','textAngular']).config(function ($statePr
         templateUrl: 'home/home.tpl.html',
         data:{ pageTitle: 'Home' }
     });
-}).controller('homeCtrl', function ($scope,$state,blogResource,userLoginStatus) {
+}).controller('homeCtrl', function ($scope,$state,blogResource,userLoginStatus,basePath) {
 
     $scope.isLoggedIn = $scope.$parent.isLoggedIn;
     $scope.currentPage = 1;
@@ -53,6 +53,10 @@ angular.module('app.home',['ui.router','textAngular']).config(function ($statePr
 
     $scope.viewBlog = function(ownerId,blogId) {
         $state.go('viewBlog',{userId:ownerId,blogId:blogId});
-    }
+    };
+
+    $scope.userIconPath = function(userId) {
+        return basePath + "user/" + userId + "/icon";
+    };
 
 });

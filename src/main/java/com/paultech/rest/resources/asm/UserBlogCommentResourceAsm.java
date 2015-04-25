@@ -37,6 +37,7 @@ public class UserBlogCommentResourceAsm extends ResourceAssemblerSupport<UserBlo
         userBlogCommentResource.setComment(userBlogComment.getComment());
         userBlogCommentResource.setCommentDate(userBlogComment.getCommentDate());
         userBlogCommentResource.setCommenterUsername(userBlogComment.getUserEntity().getUsername());
+        userBlogCommentResource.setCommenterUserId(userBlogComment.getUserEntity().getUserId());
 
         userBlogCommentResource.add(linkTo(methodOn(UserBlogCommentController.class).getUserBlogCommentByUserIdAndBlogId(userBlogComment.getUserEntity().getUserId(),userBlogComment.getBlogEntity().getBlogId())).withSelfRel());
         userBlogCommentResource.add(linkTo(methodOn(UserBlogCommentController.class).deleteUserBlogCommentByUserIdAndBlogId(userBlogComment.getUserEntity().getUserId(),userBlogComment.getBlogEntity().getBlogId())).withRel("delete"));

@@ -16,6 +16,7 @@ public class UserBlogCommentResource extends ResourceSupport {
     private String comment;
     private Date commentDate;
     private String commenterUsername;
+    private Long commenterUserId;
 
     public String getComment() {
         return comment;
@@ -39,6 +40,14 @@ public class UserBlogCommentResource extends ResourceSupport {
 
     public void setCommenterUsername(String commenterUsername) {
         this.commenterUsername = commenterUsername;
+    }
+
+    public Long getCommenterUserId() {
+        return commenterUserId;
+    }
+
+    public void setCommenterUserId(Long commenterUserId) {
+        this.commenterUserId = commenterUserId;
     }
 
     public UserBlogComment toUserBlogComment() {

@@ -31,31 +31,22 @@ angular.module('app.changeUserProfile',['ui.router']).config(function($stateProv
     $scope.changePassword = false;
 
     $scope.submit = function() {
-        userResource.updateUser($scope.user,function(data) {
-            alert("success" + data.userId);
-            userLoginStatus.login(data.userId);
-            $state.go('home');
-        }, function() {
-            alert("failure");
-        });
-    }
 
-}).directive('confirmPassword', function () {
-    return {
-        restrict: 'A',
-        require: 'ngModel',
-        link: function (scope, element, attr, ctrl) {
-            element.on('blur',function() {
-                scope.$apply(function () {
-                    if(scope.user.password == scope.user.confirmPassword) {
-                        ctrl.$setValidity('confirmValid', true);
-                    } else {
-                        ctrl.$setValidity('confirmValid', false);
-                    }
+        if($scope.changeUserProfileForm.$valid) {
+            if($scope.icon != undefined || $scope.icon != null) {
+                userResource.updateUserIcon($scope.userId,$scope.icon,function() {
+                    alert("update image success.");
+                }, function() {
+                    alert("update image fail");
                 });
-
+            }
+            userResource.updateUser($scope.user,function(data) {
+                alert("success" + data.userId);
+                userLoginStatus.login(data.userId);
+                $state.go('home');
+            }, function() {
+                alert("failure");
             });
-
         }
-    };
+    }
 });

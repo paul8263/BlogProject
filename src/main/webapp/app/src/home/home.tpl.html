@@ -2,8 +2,8 @@
     <div ng-hide="blogList.content == null || blog.content.length == 0">
         <div class="media" ng-repeat="item in blogList.content | orderBy:'createDate'">
             <div class="media-left media-middle">
-                <a href="#">
-                    <img class="media-object" src="" alt="...">
+                <a ng-click="viewBlog(item.ownerId,item.blogId)">
+                    <img class="media-object" ng-src="{{userIconPath(item.ownerId)}}" alt="50px,50px" height="50px" width="50px">
                 </a>
             </div>
             <div class="media-body">
