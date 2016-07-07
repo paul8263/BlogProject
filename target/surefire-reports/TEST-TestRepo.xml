@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="20" failures="0" name="TestRepo" time="1.286" errors="13" skipped="0">
+  <properties>
+    <property name="idea.version" value="15.0.2"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.25-b02"/>
+    <property name="user.country.format" value="AU"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="idea.launcher.port" value="7538"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/paulzhang/IdeaProjects/myblog"/>
+    <property name="java.runtime.version" value="1.8.0_25-b17"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/_t/87r8cx352kd0bqr3vfzhg1_c0000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Applications/apache-maven-3.2.5/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/paulzhang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.11.5"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/paulzhang"/>
+    <property name="user.timezone" value="Australia/Sydney"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="idea.launcher.bin.path" value="/Applications/IntelliJ IDEA 15.app/Contents/bin"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="paulzhang"/>
+    <property name="java.class.path" value="/Applications/apache-maven-3.2.5/boot/plexus-classworlds-2.5.2.jar:/Applications/IntelliJ IDEA 15.app/Contents/lib/idea_rt.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="com.intellij.rt.execution.application.AppMain org.codehaus.classworlds.Launcher -Didea.version=15.0.2 org.apache.tomcat.maven:tomcat7-maven-plugin:2.2:redeploy"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_25"/>
+    <property name="java.ext.dirs" value="/Users/paulzhang/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Applications/apache-maven-3.2.5"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="TestRepo" name="testCommentDeletion" time="0.625"/>
+  <testcase classname="TestRepo" name="testAddAdministrator" time="0.008"/>
+  <testcase classname="TestRepo" name="testModifyBlogEntity" time="0.023">
+    <error message="User with the name: Paul already exists." type="com.paultech.core.services.exceptions.UserNameConflictException">com.paultech.core.services.exceptions.UserNameConflictException: User with the name: Paul already exists.
+	at com.paultech.core.services.UserEntityService.createUser(UserEntityService.java:54)
+	at TestRepo.testModifyBlogEntity(TestRepo.java:159)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:72)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:81)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>Hibernate: select userentity0_.user_id as user_id1_2_, userentity0_.birthday as birthday2_2_, userentity0_.gender as gender3_2_, userentity0_.password as password4_2_, userentity0_.role as role5_2_, userentity0_.self_introduce as self_int6_2_, userentity0_.username as username7_2_ from myblog.user userentity0_ where userentity0_.username=?
+Hibernate: select userblogco0_.userEntity_user_id as userEnti4_2_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, blogentity1_.blog_id as blog_id1_1_2_, blogentity1_.content as content2_1_2_, blogentity1_.create_date as create_d3_1_2_, blogentity1_.modify_date as modify_d4_1_2_, blogentity1_.owner_user_id as owner_us6_1_2_, blogentity1_.title as title5_1_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.blog blogentity1_ on userblogco0_.blog_id=blogentity1_.blog_id where userblogco0_.userEntity_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+Hibernate: select blogentity0_.owner_user_id as owner_us6_2_0_, blogentity0_.blog_id as blog_id1_1_0_, blogentity0_.blog_id as blog_id1_1_1_, blogentity0_.content as content2_1_1_, blogentity0_.create_date as create_d3_1_1_, blogentity0_.modify_date as modify_d4_1_1_, blogentity0_.owner_user_id as owner_us6_1_1_, blogentity0_.title as title5_1_1_ from myblog.blog blogentity0_ where blogentity0_.owner_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+</system-out>
+  </testcase>
+  <testcase classname="TestRepo" name="testCommentFindByBlogEntity" time="0.018">
+    <error message="User with the name: Paul already exists." type="com.paultech.core.services.exceptions.UserNameConflictException">com.paultech.core.services.exceptions.UserNameConflictException: User with the name: Paul already exists.
+	at com.paultech.core.services.UserEntityService.createUser(UserEntityService.java:54)
+	at TestRepo.testCommentFindByBlogEntity(TestRepo.java:297)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:72)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:81)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>Hibernate: select userentity0_.user_id as user_id1_2_, userentity0_.birthday as birthday2_2_, userentity0_.gender as gender3_2_, userentity0_.password as password4_2_, userentity0_.role as role5_2_, userentity0_.self_introduce as self_int6_2_, userentity0_.username as username7_2_ from myblog.user userentity0_ where userentity0_.username=?
+Hibernate: select userblogco0_.userEntity_user_id as userEnti4_2_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, blogentity1_.blog_id as blog_id1_1_2_, blogentity1_.content as content2_1_2_, blogentity1_.create_date as create_d3_1_2_, blogentity1_.modify_date as modify_d4_1_2_, blogentity1_.owner_user_id as owner_us6_1_2_, blogentity1_.title as title5_1_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.blog blogentity1_ on userblogco0_.blog_id=blogentity1_.blog_id where userblogco0_.userEntity_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+Hibernate: select blogentity0_.owner_user_id as owner_us6_2_0_, blogentity0_.blog_id as blog_id1_1_0_, blogentity0_.blog_id as blog_id1_1_1_, blogentity0_.content as content2_1_1_, blogentity0_.create_date as create_d3_1_1_, blogentity0_.modify_date as modify_d4_1_1_, blogentity0_.owner_user_id as owner_us6_1_1_, blogentity0_.title as title5_1_1_ from myblog.blog blogentity0_ where blogentity0_.owner_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+</system-out>
+  </testcase>
+  <testcase classname="TestRepo" name="testDeleteUserEntity" time="0.013">
+    <error message="User with the name: Paul already exists." type="com.paultech.core.services.exceptions.UserNameConflictException">com.paultech.core.services.exceptions.UserNameConflictException: User with the name: Paul already exists.
+	at com.paultech.core.services.UserEntityService.createUser(UserEntityService.java:54)
+	at TestRepo.testDeleteUserEntity(TestRepo.java:142)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:72)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:81)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>Hibernate: select userentity0_.user_id as user_id1_2_, userentity0_.birthday as birthday2_2_, userentity0_.gender as gender3_2_, userentity0_.password as password4_2_, userentity0_.role as role5_2_, userentity0_.self_introduce as self_int6_2_, userentity0_.username as username7_2_ from myblog.user userentity0_ where userentity0_.username=?
+Hibernate: select userblogco0_.userEntity_user_id as userEnti4_2_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, blogentity1_.blog_id as blog_id1_1_2_, blogentity1_.content as content2_1_2_, blogentity1_.create_date as create_d3_1_2_, blogentity1_.modify_date as modify_d4_1_2_, blogentity1_.owner_user_id as owner_us6_1_2_, blogentity1_.title as title5_1_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.blog blogentity1_ on userblogco0_.blog_id=blogentity1_.blog_id where userblogco0_.userEntity_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+Hibernate: select blogentity0_.owner_user_id as owner_us6_2_0_, blogentity0_.blog_id as blog_id1_1_0_, blogentity0_.blog_id as blog_id1_1_1_, blogentity0_.content as content2_1_1_, blogentity0_.create_date as create_d3_1_1_, blogentity0_.modify_date as modify_d4_1_1_, blogentity0_.owner_user_id as owner_us6_1_1_, blogentity0_.title as title5_1_1_ from myblog.blog blogentity0_ where blogentity0_.owner_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+</system-out>
+  </testcase>
+  <testcase classname="TestRepo" name="testGetUserBlogComment" time="0.028">
+    <error message="User with the name: Paul already exists." type="com.paultech.core.services.exceptions.UserNameConflictException">com.paultech.core.services.exceptions.UserNameConflictException: User with the name: Paul already exists.
+	at com.paultech.core.services.UserEntityService.createUser(UserEntityService.java:54)
+	at TestRepo.testGetUserBlogComment(TestRepo.java:397)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:72)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:81)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>Hibernate: select userentity0_.user_id as user_id1_2_, userentity0_.birthday as birthday2_2_, userentity0_.gender as gender3_2_, userentity0_.password as password4_2_, userentity0_.role as role5_2_, userentity0_.self_introduce as self_int6_2_, userentity0_.username as username7_2_ from myblog.user userentity0_ where userentity0_.username=?
+Hibernate: select userblogco0_.userEntity_user_id as userEnti4_2_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, blogentity1_.blog_id as blog_id1_1_2_, blogentity1_.content as content2_1_2_, blogentity1_.create_date as create_d3_1_2_, blogentity1_.modify_date as modify_d4_1_2_, blogentity1_.owner_user_id as owner_us6_1_2_, blogentity1_.title as title5_1_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.blog blogentity1_ on userblogco0_.blog_id=blogentity1_.blog_id where userblogco0_.userEntity_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+Hibernate: select blogentity0_.owner_user_id as owner_us6_2_0_, blogentity0_.blog_id as blog_id1_1_0_, blogentity0_.blog_id as blog_id1_1_1_, blogentity0_.content as content2_1_1_, blogentity0_.create_date as create_d3_1_1_, blogentity0_.modify_date as modify_d4_1_1_, blogentity0_.owner_user_id as owner_us6_1_1_, blogentity0_.title as title5_1_1_ from myblog.blog blogentity0_ where blogentity0_.owner_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+</system-out>
+  </testcase>
+  <testcase classname="TestRepo" name="prepareUser" time="0.033">
+    <error message="User with the name: Paul already exists." type="com.paultech.core.services.exceptions.UserNameConflictException">com.paultech.core.services.exceptions.UserNameConflictException: User with the name: Paul already exists.
+	at com.paultech.core.services.UserEntityService.createUser(UserEntityService.java:54)
+	at TestRepo.prepareUser(TestRepo.java:431)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:72)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:81)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>Hibernate: select userentity0_.user_id as user_id1_2_, userentity0_.birthday as birthday2_2_, userentity0_.gender as gender3_2_, userentity0_.password as password4_2_, userentity0_.role as role5_2_, userentity0_.self_introduce as self_int6_2_, userentity0_.username as username7_2_ from myblog.user userentity0_ where userentity0_.username=?
+Hibernate: select userblogco0_.userEntity_user_id as userEnti4_2_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, blogentity1_.blog_id as blog_id1_1_2_, blogentity1_.content as content2_1_2_, blogentity1_.create_date as create_d3_1_2_, blogentity1_.modify_date as modify_d4_1_2_, blogentity1_.owner_user_id as owner_us6_1_2_, blogentity1_.title as title5_1_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.blog blogentity1_ on userblogco0_.blog_id=blogentity1_.blog_id where userblogco0_.userEntity_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+Hibernate: select blogentity0_.owner_user_id as owner_us6_2_0_, blogentity0_.blog_id as blog_id1_1_0_, blogentity0_.blog_id as blog_id1_1_1_, blogentity0_.content as content2_1_1_, blogentity0_.create_date as create_d3_1_1_, blogentity0_.modify_date as modify_d4_1_1_, blogentity0_.owner_user_id as owner_us6_1_1_, blogentity0_.title as title5_1_1_ from myblog.blog blogentity0_ where blogentity0_.owner_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+</system-out>
+  </testcase>
+  <testcase classname="TestRepo" name="testUpdateUserEntity" time="0.033">
+    <error message="User with the name: Paul already exists." type="com.paultech.core.services.exceptions.UserNameConflictException">com.paultech.core.services.exceptions.UserNameConflictException: User with the name: Paul already exists.
+	at com.paultech.core.services.UserEntityService.createUser(UserEntityService.java:54)
+	at TestRepo.testUpdateUserEntity(TestRepo.java:135)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:72)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:81)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>Hibernate: select userentity0_.user_id as user_id1_2_, userentity0_.birthday as birthday2_2_, userentity0_.gender as gender3_2_, userentity0_.password as password4_2_, userentity0_.role as role5_2_, userentity0_.self_introduce as self_int6_2_, userentity0_.username as username7_2_ from myblog.user userentity0_ where userentity0_.username=?
+Hibernate: select userblogco0_.userEntity_user_id as userEnti4_2_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, blogentity1_.blog_id as blog_id1_1_2_, blogentity1_.content as content2_1_2_, blogentity1_.create_date as create_d3_1_2_, blogentity1_.modify_date as modify_d4_1_2_, blogentity1_.owner_user_id as owner_us6_1_2_, blogentity1_.title as title5_1_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.blog blogentity1_ on userblogco0_.blog_id=blogentity1_.blog_id where userblogco0_.userEntity_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+Hibernate: select blogentity0_.owner_user_id as owner_us6_2_0_, blogentity0_.blog_id as blog_id1_1_0_, blogentity0_.blog_id as blog_id1_1_1_, blogentity0_.content as content2_1_1_, blogentity0_.create_date as create_d3_1_1_, blogentity0_.modify_date as modify_d4_1_1_, blogentity0_.owner_user_id as owner_us6_1_1_, blogentity0_.title as title5_1_1_ from myblog.blog blogentity0_ where blogentity0_.owner_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+</system-out>
+  </testcase>
+  <testcase classname="TestRepo" name="testCommentCreation" time="0.023">
+    <error message="User with the name: Paul already exists." type="com.paultech.core.services.exceptions.UserNameConflictException">com.paultech.core.services.exceptions.UserNameConflictException: User with the name: Paul already exists.
+	at com.paultech.core.services.UserEntityService.createUser(UserEntityService.java:54)
+	at TestRepo.testCommentCreation(TestRepo.java:194)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:72)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:81)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>Hibernate: select userentity0_.user_id as user_id1_2_, userentity0_.birthday as birthday2_2_, userentity0_.gender as gender3_2_, userentity0_.password as password4_2_, userentity0_.role as role5_2_, userentity0_.self_introduce as self_int6_2_, userentity0_.username as username7_2_ from myblog.user userentity0_ where userentity0_.username=?
+Hibernate: select userblogco0_.userEntity_user_id as userEnti4_2_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, blogentity1_.blog_id as blog_id1_1_2_, blogentity1_.content as content2_1_2_, blogentity1_.create_date as create_d3_1_2_, blogentity1_.modify_date as modify_d4_1_2_, blogentity1_.owner_user_id as owner_us6_1_2_, blogentity1_.title as title5_1_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.blog blogentity1_ on userblogco0_.blog_id=blogentity1_.blog_id where userblogco0_.userEntity_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+Hibernate: select blogentity0_.owner_user_id as owner_us6_2_0_, blogentity0_.blog_id as blog_id1_1_0_, blogentity0_.blog_id as blog_id1_1_1_, blogentity0_.content as content2_1_1_, blogentity0_.create_date as create_d3_1_1_, blogentity0_.modify_date as modify_d4_1_1_, blogentity0_.owner_user_id as owner_us6_1_1_, blogentity0_.title as title5_1_1_ from myblog.blog blogentity0_ where blogentity0_.owner_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+</system-out>
+  </testcase>
+  <testcase classname="TestRepo" name="testUserServiceCreateAndFind" time="0.02">
+    <error message="User with the name: Paul already exists." type="com.paultech.core.services.exceptions.UserNameConflictException">com.paultech.core.services.exceptions.UserNameConflictException: User with the name: Paul already exists.
+	at com.paultech.core.services.UserEntityService.createUser(UserEntityService.java:54)
+	at TestRepo.testUserServiceCreateAndFind(TestRepo.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:72)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:81)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>Hibernate: select userentity0_.user_id as user_id1_2_, userentity0_.birthday as birthday2_2_, userentity0_.gender as gender3_2_, userentity0_.password as password4_2_, userentity0_.role as role5_2_, userentity0_.self_introduce as self_int6_2_, userentity0_.username as username7_2_ from myblog.user userentity0_ where userentity0_.username=?
+Hibernate: select userblogco0_.userEntity_user_id as userEnti4_2_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, blogentity1_.blog_id as blog_id1_1_2_, blogentity1_.content as content2_1_2_, blogentity1_.create_date as create_d3_1_2_, blogentity1_.modify_date as modify_d4_1_2_, blogentity1_.owner_user_id as owner_us6_1_2_, blogentity1_.title as title5_1_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.blog blogentity1_ on userblogco0_.blog_id=blogentity1_.blog_id where userblogco0_.userEntity_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+Hibernate: select blogentity0_.owner_user_id as owner_us6_2_0_, blogentity0_.blog_id as blog_id1_1_0_, blogentity0_.blog_id as blog_id1_1_1_, blogentity0_.content as content2_1_1_, blogentity0_.create_date as create_d3_1_1_, blogentity0_.modify_date as modify_d4_1_1_, blogentity0_.owner_user_id as owner_us6_1_1_, blogentity0_.title as title5_1_1_ from myblog.blog blogentity0_ where blogentity0_.owner_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+</system-out>
+  </testcase>
+  <testcase classname="TestRepo" name="testCommentFindByUserEntity" time="0.024">
+    <error message="User with the name: Paul already exists." type="com.paultech.core.services.exceptions.UserNameConflictException">com.paultech.core.services.exceptions.UserNameConflictException: User with the name: Paul already exists.
+	at com.paultech.core.services.UserEntityService.createUser(UserEntityService.java:54)
+	at TestRepo.testCommentFindByUserEntity(TestRepo.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:72)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:81)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>Hibernate: select userentity0_.user_id as user_id1_2_, userentity0_.birthday as birthday2_2_, userentity0_.gender as gender3_2_, userentity0_.password as password4_2_, userentity0_.role as role5_2_, userentity0_.self_introduce as self_int6_2_, userentity0_.username as username7_2_ from myblog.user userentity0_ where userentity0_.username=?
+Hibernate: select userblogco0_.userEntity_user_id as userEnti4_2_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, blogentity1_.blog_id as blog_id1_1_2_, blogentity1_.content as content2_1_2_, blogentity1_.create_date as create_d3_1_2_, blogentity1_.modify_date as modify_d4_1_2_, blogentity1_.owner_user_id as owner_us6_1_2_, blogentity1_.title as title5_1_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.blog blogentity1_ on userblogco0_.blog_id=blogentity1_.blog_id where userblogco0_.userEntity_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+Hibernate: select blogentity0_.owner_user_id as owner_us6_2_0_, blogentity0_.blog_id as blog_id1_1_0_, blogentity0_.blog_id as blog_id1_1_1_, blogentity0_.content as content2_1_1_, blogentity0_.create_date as create_d3_1_1_, blogentity0_.modify_date as modify_d4_1_1_, blogentity0_.owner_user_id as owner_us6_1_1_, blogentity0_.title as title5_1_1_ from myblog.blog blogentity0_ where blogentity0_.owner_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+</system-out>
+  </testcase>
+  <testcase classname="TestRepo" name="blank" time="0.001"/>
+  <testcase classname="TestRepo" name="testModifyAdministrator" time="0.015"/>
+  <testcase classname="TestRepo" name="testBlogEntityPage" time="0.014">
+    <error message="User with the name: Paul already exists." type="com.paultech.core.services.exceptions.UserNameConflictException">com.paultech.core.services.exceptions.UserNameConflictException: User with the name: Paul already exists.
+	at com.paultech.core.services.UserEntityService.createUser(UserEntityService.java:54)
+	at TestRepo.testBlogEntityPage(TestRepo.java:263)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:72)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:81)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>Hibernate: select userentity0_.user_id as user_id1_2_, userentity0_.birthday as birthday2_2_, userentity0_.gender as gender3_2_, userentity0_.password as password4_2_, userentity0_.role as role5_2_, userentity0_.self_introduce as self_int6_2_, userentity0_.username as username7_2_ from myblog.user userentity0_ where userentity0_.username=?
+Hibernate: select userblogco0_.userEntity_user_id as userEnti4_2_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, blogentity1_.blog_id as blog_id1_1_2_, blogentity1_.content as content2_1_2_, blogentity1_.create_date as create_d3_1_2_, blogentity1_.modify_date as modify_d4_1_2_, blogentity1_.owner_user_id as owner_us6_1_2_, blogentity1_.title as title5_1_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.blog blogentity1_ on userblogco0_.blog_id=blogentity1_.blog_id where userblogco0_.userEntity_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+Hibernate: select blogentity0_.owner_user_id as owner_us6_2_0_, blogentity0_.blog_id as blog_id1_1_0_, blogentity0_.blog_id as blog_id1_1_1_, blogentity0_.content as content2_1_1_, blogentity0_.create_date as create_d3_1_1_, blogentity0_.modify_date as modify_d4_1_1_, blogentity0_.owner_user_id as owner_us6_1_1_, blogentity0_.title as title5_1_1_ from myblog.blog blogentity0_ where blogentity0_.owner_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+</system-out>
+  </testcase>
+  <testcase classname="TestRepo" name="testCommentModification" time="0.03">
+    <error message="User with the name: Paul already exists." type="com.paultech.core.services.exceptions.UserNameConflictException">com.paultech.core.services.exceptions.UserNameConflictException: User with the name: Paul already exists.
+	at com.paultech.core.services.UserEntityService.createUser(UserEntityService.java:54)
+	at TestRepo.testCommentModification(TestRepo.java:204)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:72)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:81)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>Hibernate: select userentity0_.user_id as user_id1_2_, userentity0_.birthday as birthday2_2_, userentity0_.gender as gender3_2_, userentity0_.password as password4_2_, userentity0_.role as role5_2_, userentity0_.self_introduce as self_int6_2_, userentity0_.username as username7_2_ from myblog.user userentity0_ where userentity0_.username=?
+Hibernate: select userblogco0_.userEntity_user_id as userEnti4_2_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, blogentity1_.blog_id as blog_id1_1_2_, blogentity1_.content as content2_1_2_, blogentity1_.create_date as create_d3_1_2_, blogentity1_.modify_date as modify_d4_1_2_, blogentity1_.owner_user_id as owner_us6_1_2_, blogentity1_.title as title5_1_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.blog blogentity1_ on userblogco0_.blog_id=blogentity1_.blog_id where userblogco0_.userEntity_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+Hibernate: select blogentity0_.owner_user_id as owner_us6_2_0_, blogentity0_.blog_id as blog_id1_1_0_, blogentity0_.blog_id as blog_id1_1_1_, blogentity0_.content as content2_1_1_, blogentity0_.create_date as create_d3_1_1_, blogentity0_.modify_date as modify_d4_1_1_, blogentity0_.owner_user_id as owner_us6_1_1_, blogentity0_.title as title5_1_1_ from myblog.blog blogentity0_ where blogentity0_.owner_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+</system-out>
+  </testcase>
+  <testcase classname="TestRepo" name="testDeleteBlogEntity" time="0.026">
+    <error message="User with the name: Paul already exists." type="com.paultech.core.services.exceptions.UserNameConflictException">com.paultech.core.services.exceptions.UserNameConflictException: User with the name: Paul already exists.
+	at com.paultech.core.services.UserEntityService.createUser(UserEntityService.java:54)
+	at TestRepo.testDeleteBlogEntity(TestRepo.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:72)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:81)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>Hibernate: select userentity0_.user_id as user_id1_2_, userentity0_.birthday as birthday2_2_, userentity0_.gender as gender3_2_, userentity0_.password as password4_2_, userentity0_.role as role5_2_, userentity0_.self_introduce as self_int6_2_, userentity0_.username as username7_2_ from myblog.user userentity0_ where userentity0_.username=?
+Hibernate: select userblogco0_.userEntity_user_id as userEnti4_2_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, blogentity1_.blog_id as blog_id1_1_2_, blogentity1_.content as content2_1_2_, blogentity1_.create_date as create_d3_1_2_, blogentity1_.modify_date as modify_d4_1_2_, blogentity1_.owner_user_id as owner_us6_1_2_, blogentity1_.title as title5_1_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.blog blogentity1_ on userblogco0_.blog_id=blogentity1_.blog_id where userblogco0_.userEntity_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+Hibernate: select blogentity0_.owner_user_id as owner_us6_2_0_, blogentity0_.blog_id as blog_id1_1_0_, blogentity0_.blog_id as blog_id1_1_1_, blogentity0_.content as content2_1_1_, blogentity0_.create_date as create_d3_1_1_, blogentity0_.modify_date as modify_d4_1_1_, blogentity0_.owner_user_id as owner_us6_1_1_, blogentity0_.title as title5_1_1_ from myblog.blog blogentity0_ where blogentity0_.owner_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+</system-out>
+  </testcase>
+  <testcase classname="TestRepo" name="testBcrypt" time="0.294"/>
+  <testcase classname="TestRepo" name="testAddBlogEntity" time="0.024">
+    <error message="User with the name: Paul already exists." type="com.paultech.core.services.exceptions.UserNameConflictException">com.paultech.core.services.exceptions.UserNameConflictException: User with the name: Paul already exists.
+	at com.paultech.core.services.UserEntityService.createUser(UserEntityService.java:54)
+	at TestRepo.testAddBlogEntity(TestRepo.java:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:72)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:81)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>Hibernate: select userentity0_.user_id as user_id1_2_, userentity0_.birthday as birthday2_2_, userentity0_.gender as gender3_2_, userentity0_.password as password4_2_, userentity0_.role as role5_2_, userentity0_.self_introduce as self_int6_2_, userentity0_.username as username7_2_ from myblog.user userentity0_ where userentity0_.username=?
+Hibernate: select userblogco0_.userEntity_user_id as userEnti4_2_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, blogentity1_.blog_id as blog_id1_1_2_, blogentity1_.content as content2_1_2_, blogentity1_.create_date as create_d3_1_2_, blogentity1_.modify_date as modify_d4_1_2_, blogentity1_.owner_user_id as owner_us6_1_2_, blogentity1_.title as title5_1_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.blog blogentity1_ on userblogco0_.blog_id=blogentity1_.blog_id where userblogco0_.userEntity_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+Hibernate: select blogentity0_.owner_user_id as owner_us6_2_0_, blogentity0_.blog_id as blog_id1_1_0_, blogentity0_.blog_id as blog_id1_1_1_, blogentity0_.content as content2_1_1_, blogentity0_.create_date as create_d3_1_1_, blogentity0_.modify_date as modify_d4_1_1_, blogentity0_.owner_user_id as owner_us6_1_1_, blogentity0_.title as title5_1_1_ from myblog.blog blogentity0_ where blogentity0_.owner_user_id=?
+Hibernate: select userblogco0_.blog_id as blog_id3_1_0_, userblogco0_.blog_id as blog_id3_3_0_, userblogco0_.userEntity_user_id as userEnti4_3_0_, userblogco0_.blog_id as blog_id3_3_1_, userblogco0_.userEntity_user_id as userEnti4_3_1_, userblogco0_.comment as comment1_3_1_, userblogco0_.comment_date as comment_2_3_1_, userentity1_.user_id as user_id1_2_2_, userentity1_.birthday as birthday2_2_2_, userentity1_.gender as gender3_2_2_, userentity1_.password as password4_2_2_, userentity1_.role as role5_2_2_, userentity1_.self_introduce as self_int6_2_2_, userentity1_.username as username7_2_2_ from myblog.user_blog_comment userblogco0_ left outer join myblog.user userentity1_ on userblogco0_.userEntity_user_id=userentity1_.user_id where userblogco0_.blog_id=?
+</system-out>
+  </testcase>
+  <testcase classname="TestRepo" name="testDeleteAdministrator" time="0.012"/>
+  <testcase classname="TestRepo" name="testUserServiceDuplicated" time="0.022"/>
+</testsuite>

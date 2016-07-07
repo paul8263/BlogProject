@@ -58,7 +58,7 @@ public class TestRepo {
         calendar1.set(1989,5,21);
         userEntity1.setBirthday(calendar1.getTime());
         userEntity1.setGender(Gender.MALE);
-        userEntity1.setIconPath("/img/001.jpg");
+//        userEntity1.setIconPath("/img/001.jpg");
         userEntity1.setRole("ROLE_USER");
         userEntity1.setSelfIntroduce("Hello Everyone");
 
@@ -69,7 +69,7 @@ public class TestRepo {
         calendar2.set(1990,5,21);
         userEntity2.setBirthday(calendar2.getTime());
         userEntity2.setGender(Gender.FEMALE);
-        userEntity2.setIconPath("/img/001.jpg");
+//        userEntity2.setIconPath("/img/001.jpg");
         userEntity2.setRole("ROLE_USER");
         userEntity2.setSelfIntroduce("Hello Everyone");
 
@@ -256,7 +256,7 @@ public class TestRepo {
         calendar1.set(1989,5,21);
         userEntity.setBirthday(calendar1.getTime());
         userEntity.setGender(Gender.MALE);
-        userEntity.setIconPath("/img/001.jpg");
+//        userEntity.setIconPath("/img/001.jpg");
         userEntity.setRole("ROLE_USER");
         userEntity.setSelfIntroduce("Hello Everyone");
 
@@ -290,7 +290,7 @@ public class TestRepo {
         calendar1.set(1989,5,21);
         userEntity.setBirthday(calendar1.getTime());
         userEntity.setGender(Gender.MALE);
-        userEntity.setIconPath("/img/001.jpg");
+//        userEntity.setIconPath("/img/001.jpg");
         userEntity.setRole("ROLE_USER");
         userEntity.setSelfIntroduce("Hello Everyone");
 
@@ -313,7 +313,7 @@ public class TestRepo {
             calendar2.set(1989,5,21);
             userEntity1.setBirthday(calendar1.getTime());
             userEntity1.setGender(Gender.MALE);
-            userEntity1.setIconPath("/img/001.jpg");
+//            userEntity1.setIconPath("/img/001.jpg");
             userEntity1.setRole("ROLE_USER");
             userEntity1.setSelfIntroduce("Hello Everyone");
             userEntityService.createUser(userEntity1);
@@ -349,7 +349,7 @@ public class TestRepo {
         calendar1.set(1989,5,21);
         userEntity.setBirthday(calendar1.getTime());
         userEntity.setGender(Gender.MALE);
-        userEntity.setIconPath("/img/001.jpg");
+//        userEntity.setIconPath("/img/001.jpg");
         userEntity.setRole("ROLE_USER");
         userEntity.setSelfIntroduce("Hello Everyone");
         userEntityService.createUser(userEntity);
@@ -391,7 +391,7 @@ public class TestRepo {
         calendar1.set(1989,5,21);
         userEntity.setBirthday(calendar1.getTime());
         userEntity.setGender(Gender.MALE);
-        userEntity.setIconPath("/img/001.jpg");
+//        userEntity.setIconPath("/img/001.jpg");
         userEntity.setRole("ROLE_USER");
         userEntity.setSelfIntroduce("Hello Everyone");
         userEntityService.createUser(userEntity);

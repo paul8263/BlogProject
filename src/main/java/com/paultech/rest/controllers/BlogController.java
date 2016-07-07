@@ -11,7 +11,6 @@ import com.paultech.rest.controllers.exceptions.NotFoundException;
 import com.paultech.rest.resources.BlogEntityResource;
 import com.paultech.rest.resources.asm.BlogEntityResourceAsm;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.PagedResources;
@@ -35,6 +34,13 @@ public class BlogController extends ParentController {
 
     @Autowired
     private BlogEntityResourceAsm blogEntityResourceAsm;
+
+//    Test
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public String test() {
+        System.out.println("test");
+        return "test";
+    }
 
 
     @RequestMapping(value = "/blog", method = RequestMethod.GET,produces = "application/json")
